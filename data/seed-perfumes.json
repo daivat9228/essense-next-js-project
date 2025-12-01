@@ -1,0 +1,1134 @@
+[
+  {
+    "id": "1",
+    "title": "Chanel No. 5",
+    "slug": "chanel-no-5",
+    "description": "Aldehydic floral with jasmine, rose, ylang-ylang, orris, sandalwood and vanilla",
+    "brand": "Chanel",
+    "category": "Women",
+    "family": "Floral",
+    "price": 220,
+    "sizes": [
+      { "sizeMl": 50, "sku": "CH5-50", "price": 150 },
+      { "sizeMl": 100, "sku": "CH5-100", "price": 220 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1514348871858-1d3c20902571?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1514348871858-1d3c20902571?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "notes": {
+      "top": ["Aldehydes", "Ylang-Ylang", "Neroli"],
+      "middle": ["Jasmine", "Rose", "Orris"],
+      "base": ["Sandalwood", "Vetiver", "Vanilla"]
+    },
+    "longevity": "8-10 hours",
+    "sillage": "Strong",
+    "tags": ["iconic", "classic", "elegant"],
+    "rating": 4.8,
+    "featured": true
+  },
+  {
+    "id": "2",
+    "title": "Bleu de Chanel",
+    "slug": "bleu-de-chanel",
+    "description": "Aromatic woody citrus: grapefruit/bergamot, ginger, incense, cedar and vetiver",
+    "brand": "Chanel",
+    "category": "Men",
+    "family": "Woody",
+    "price": 200,
+    "sizes": [
+      { "sizeMl": 50, "sku": "BDC-50", "price": 140 },
+      { "sizeMl": 100, "sku": "BDC-100", "price": 200 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"    
+    ],
+    "notes": {
+      "top": ["Grapefruit", "Bergamot", "Ginger"],
+      "middle": ["Nutmeg", "Jasmine", "Incense"],
+      "base": ["Cedar", "Vetiver", "Sandalwood"]
+    },
+    "longevity": "7-9 hours",
+    "sillage": "Moderate",
+    "tags": ["fresh", "masculine", "versatile"],
+    "rating": 4.7,
+    "featured": true
+  },
+  {
+    "id": "3",
+    "title": "Coco Mademoiselle",
+    "slug": "coco-mademoiselle",
+    "description": "Fresh oriental floral: orange, bergamot, rose, jasmine, patchouli and vetiver",
+    "brand": "Chanel",
+    "category": "Women",
+    "family": "Oriental",
+    "price": 210,
+    "sizes": [
+      { "sizeMl": 50, "sku": "CCM-50", "price": 145 },
+      { "sizeMl": 100, "sku": "CCM-100", "price": 210 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500",
+      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=500"
+    ],
+    "notes": {
+      "top": ["Orange", "Bergamot", "Grapefruit"],
+      "middle": ["Rose", "Jasmine", "Lychee"],
+      "base": ["Patchouli", "Vetiver", "Vanilla"]
+    },
+    "longevity": "7-9 hours",
+    "sillage": "Moderate",
+    "tags": ["oriental", "elegant", "sophisticated"],
+    "rating": 4.6
+  },
+  {
+    "id": "4",
+    "title": "Chance",
+    "slug": "chance",
+    "description": "Sparkling floral-oriental: pink pepper, bergamot, jasmine, iris and patchouli",
+    "brand": "Chanel",
+    "category": "Women",
+    "family": "Floral",
+    "price": 195,
+    "sizes": [
+      { "sizeMl": 50, "sku": "CH-50", "price": 135 },
+      { "sizeMl": 100, "sku": "CH-100", "price": 195 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500",
+      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=500"
+    ],
+    "notes": {
+      "top": ["Pink Pepper", "Bergamot", "Lemon"],
+      "middle": ["Jasmine", "Iris", "Hyacinth"],
+      "base": ["Patchouli", "Vetiver", "White Musk"]
+    },
+    "longevity": "6-8 hours",
+    "sillage": "Moderate",
+    "tags": ["sparkling", "floral", "elegant"],
+    "rating": 4.5
+  },
+  {
+    "id": "5",
+    "title": "Allure Homme Sport",
+    "slug": "allure-homme-sport",
+    "description": "Fresh spicy aquatic: orange, aldehydes, pepper, sea notes, tonka and cedar",
+    "brand": "Chanel",
+    "category": "Men",
+    "family": "Fresh",
+    "price": 180,
+    "sizes": [
+      { "sizeMl": 50, "sku": "AHS-50", "price": 125 },
+      { "sizeMl": 100, "sku": "AHS-100", "price": 180 }
+    ],
+    "concentration": "EDT",
+    "images": [
+      "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500"
+    ],
+    "notes": {
+      "top": ["Orange", "Aldehydes", "Neroli"],
+      "middle": ["Pepper", "Sea Notes", "Cedar"],
+      "base": ["Tonka Bean", "Vetiver", "Elemi"]
+    },
+    "longevity": "6-8 hours",
+    "sillage": "Moderate",
+    "tags": ["sporty", "fresh", "aquatic"],
+    "rating": 4.4
+  },
+  {
+    "id": "6",
+    "title": "Sauvage",
+    "slug": "sauvage",
+    "description": "Fresh spicy aromatic: Calabrian bergamot, pepper, ambroxan, cedar and vanilla amber facets",
+    "brand": "Dior",
+    "category": "Men",
+    "family": "Fresh",
+    "price": 180,
+    "sizes": [
+      { "sizeMl": 50, "sku": "SAU-50", "price": 130 },
+      { "sizeMl": 100, "sku": "SAU-100", "price": 180 }
+    ],
+    "concentration": "EDT",
+    "images": [
+      "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500"
+    ],
+    "notes": {
+      "top": ["Calabrian Bergamot", "Pepper"],
+      "middle": ["Sichuan Pepper", "Lavender", "Pink Pepper"],
+      "base": ["Ambroxan", "Cedar", "Vanilla"]
+    },
+    "longevity": "6-8 hours",
+    "sillage": "Strong",
+    "tags": ["fresh", "spicy", "popular"],
+    "rating": 4.6,
+    "featured": true
+  },
+  {
+    "id": "7",
+    "title": "J'adore",
+    "slug": "jadore",
+    "description": "Luxurious floral bouquet: ylang-ylang, Damascus rose, jasmine and bergamot",
+    "brand": "Dior",
+    "category": "Women",
+    "family": "Floral",
+    "price": 210,
+    "sizes": [
+      { "sizeMl": 50, "sku": "JAD-50", "price": 145 },
+      { "sizeMl": 100, "sku": "JAD-100", "price": 210 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500",
+      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=500"
+    ],
+    "notes": {
+      "top": ["Bergamot", "Pear", "Melon"],
+      "middle": ["Ylang-Ylang", "Damascus Rose", "Jasmine"],
+      "base": ["Musk", "Vanilla", "Cedar"]
+    },
+    "longevity": "7-9 hours",
+    "sillage": "Moderate",
+    "tags": ["floral", "elegant", "feminine"],
+    "rating": 4.5
+  },
+  {
+    "id": "8",
+    "title": "Miss Dior",
+    "slug": "miss-dior",
+    "description": "Charming floral-chypre: citrus, rose, patchouli and musk",
+    "brand": "Dior",
+    "category": "Women",
+    "family": "Floral",
+    "price": 200,
+    "sizes": [
+      { "sizeMl": 50, "sku": "MD-50", "price": 140 },
+      { "sizeMl": 100, "sku": "MD-100", "price": 200 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500",
+      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=500"
+    ],
+    "notes": {
+      "top": ["Citrus", "Mandarin", "Blood Orange"],
+      "middle": ["Rose", "Peony", "Lily of the Valley"],
+      "base": ["Patchouli", "Musk", "Rosewood"]
+    },
+    "longevity": "6-8 hours",
+    "sillage": "Moderate",
+    "tags": ["chypre", "elegant", "classic"],
+    "rating": 4.4
+  },
+  {
+    "id": "9",
+    "title": "Dior Homme Intense",
+    "slug": "dior-homme-intense",
+    "description": "Powdery woody iris: iris, lavender, amber, vetiver and leather nuances",
+    "brand": "Dior",
+    "category": "Men",
+    "family": "Woody",
+    "price": 195,
+    "sizes": [
+      { "sizeMl": 50, "sku": "DHI-50", "price": 135 },
+      { "sizeMl": 100, "sku": "DHI-100", "price": 195 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500",
+      "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500"
+    ],
+    "notes": {
+      "top": ["Lavender", "Bergamot"],
+      "middle": ["Iris", "Ambrette", "Pear"],
+      "base": ["Vetiver", "Leather", "Cedar"]
+    },
+    "longevity": "8-10 hours",
+    "sillage": "Strong",
+    "tags": ["powdery", "iris", "sophisticated"],
+    "rating": 4.7
+  },
+  {
+    "id": "10",
+    "title": "Fahrenheit",
+    "slug": "fahrenheit",
+    "description": "Unique leathery floral-woody: violet, leather, nutmeg, cedar and benzoin",
+    "brand": "Dior",
+    "category": "Men",
+    "family": "Woody",
+    "price": 175,
+    "sizes": [
+      { "sizeMl": 50, "sku": "FAH-50", "price": 125 },
+      { "sizeMl": 100, "sku": "FAH-100", "price": 175 }
+    ],
+    "concentration": "EDT",
+    "images": [
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500",
+      "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500"
+    ],
+    "notes": {
+      "top": ["Violet", "Mandarin", "Hawthorn"],
+      "middle": ["Nutmeg", "Cedar", "Carnation"],
+      "base": ["Leather", "Benzoin", "Sandalwood"]
+    },
+    "longevity": "7-9 hours",
+    "sillage": "Strong",
+    "tags": ["unique", "leather", "vintage"],
+    "rating": 4.3
+  },
+  {
+    "id": "11",
+    "title": "Gucci Bloom",
+    "slug": "gucci-bloom",
+    "description": "White floral: tuberose, jasmine and Rangoon creeper (creamy florals)",
+    "brand": "Gucci",
+    "category": "Women",
+    "family": "Floral",
+    "price": 190,
+    "sizes": [
+      { "sizeMl": 50, "sku": "GB-50", "price": 130 },
+      { "sizeMl": 100, "sku": "GB-100", "price": 190 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500",
+      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=500"
+    ],
+    "notes": {
+      "top": ["Natural Tuberose", "Jasmine"],
+      "middle": ["Rangoon Creeper", "Tuberose"],
+      "base": ["Sandalwood", "Orris"]
+    },
+    "longevity": "7-9 hours",
+    "sillage": "Strong",
+    "tags": ["white floral", "creamy", "luxurious"],
+    "rating": 4.5
+  },
+  {
+    "id": "12",
+    "title": "Gucci Guilty",
+    "slug": "gucci-guilty",
+    "description": "Warm floral-amber: pink pepper, lilac, iris, patchouli and amber",
+    "brand": "Gucci",
+    "category": "Unisex",
+    "family": "Oriental",
+    "price": 175,
+    "sizes": [
+      { "sizeMl": 50, "sku": "GG-50", "price": 120 },
+      { "sizeMl": 100, "sku": "GG-100", "price": 175 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500",
+      "https://images.unsplash.com/photo-1588405748880-12d1d2a59d32?w=500"
+    ],
+    "notes": {
+      "top": ["Pink Pepper", "Mandarin"],
+      "middle": ["Lilac", "Iris", "Geranium"],
+      "base": ["Patchouli", "Amber"]
+    },
+    "longevity": "6-8 hours",
+    "sillage": "Moderate",
+    "tags": ["warm", "amber", "unisex"],
+    "rating": 4.3
+  },
+  {
+    "id": "13",
+    "title": "Tobacco Vanille",
+    "slug": "tobacco-vanille",
+    "description": "Warm gourmand: tobacco leaf, vanilla, cacao and dried fruits",
+    "brand": "Tom Ford",
+    "category": "Unisex",
+    "family": "Oriental",
+    "price": 380,
+    "salePrice": 320,
+    "sizes": [
+      { "sizeMl": 50, "sku": "TV-50", "price": 280 },
+      { "sizeMl": 100, "sku": "TV-100", "price": 380 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=500",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500"
+    ],
+    "notes": {
+      "top": ["Tobacco Leaf", "Spicy Notes"],
+      "middle": ["Vanilla", "Cocoa", "Tonka Bean"],
+      "base": ["Dried Fruits", "Woody Notes"]
+    },
+    "longevity": "10-12 hours",
+    "sillage": "Very Strong",
+    "tags": ["tobacco", "vanilla", "luxury"],
+    "rating": 4.9,
+    "featured": true
+  },
+  {
+    "id": "14",
+    "title": "Oud Wood",
+    "slug": "oud-wood",
+    "description": "Smoky woody oud: oud, rosewood, cardamom, sandalwood and vetiver",
+    "brand": "Tom Ford",
+    "category": "Unisex",
+    "family": "Woody",
+    "price": 480,
+    "sizes": [
+      { "sizeMl": 50, "sku": "OW-50", "price": 320 },
+      { "sizeMl": 100, "sku": "OW-100", "price": 480 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500",
+      "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=500"
+    ],
+    "notes": {
+      "top": ["Rosewood", "Cardamom", "Chinese Pepper"],
+      "middle": ["Oud", "Sandalwood", "Palissander"],
+      "base": ["Vanilla", "Amber"]
+    },
+    "longevity": "8-10 hours",
+    "sillage": "Strong",
+    "tags": ["oud", "woody", "sophisticated"],
+    "rating": 4.8,
+    "featured": true
+  },
+  {
+    "id": "15",
+    "title": "Black Orchid",
+    "slug": "black-orchid",
+    "description": "Dark floral-oriental: black truffle, black orchid, patchouli and incense",
+    "brand": "Tom Ford",
+    "category": "Women",
+    "family": "Oriental",
+    "price": 350,
+    "sizes": [
+      { "sizeMl": 50, "sku": "BO-50", "price": 250 },
+      { "sizeMl": 100, "sku": "BO-100", "price": 350 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500",
+      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=500"
+    ],
+    "notes": {
+      "top": ["Black Truffle", "Ylang-Ylang", "Bergamot"],
+      "middle": ["Black Orchid", "Spices", "Fruity Notes"],
+      "base": ["Patchouli", "Incense", "Vanilla"]
+    },
+    "longevity": "8-10 hours",
+    "sillage": "Very Strong",
+    "tags": ["dark", "mysterious", "luxurious"],
+    "rating": 4.6
+  },
+  {
+    "id": "16",
+    "title": "Neroli Portofino",
+    "slug": "neroli-portofino",
+    "description": "Citrus aromatic: neroli, bergamot, orange blossom and amber",
+    "brand": "Tom Ford",
+    "category": "Unisex",
+    "family": "Fresh",
+    "price": 320,
+    "sizes": [
+      { "sizeMl": 50, "sku": "NP-50", "price": 230 },
+      { "sizeMl": 100, "sku": "NP-100", "price": 320 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1588405748880-12d1d2a59d32?w=500",
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500"
+    ],
+    "notes": {
+      "top": ["Neroli", "Bergamot", "Lemon"],
+      "middle": ["Orange Blossom", "Jasmine", "Lavender"],
+      "base": ["Amber", "Angelica"]
+    },
+    "longevity": "5-7 hours",
+    "sillage": "Moderate",
+    "tags": ["citrus", "fresh", "summery"],
+    "rating": 4.4
+  },
+  {
+    "id": "17",
+    "title": "Bitter Peach",
+    "slug": "bitter-peach",
+    "description": "Fruity oriental: juicy peach, blood orange, patchouli, vetiver and suede",
+    "brand": "Tom Ford",
+    "category": "Unisex",
+    "family": "Oriental",
+    "price": 380,
+    "sizes": [
+      { "sizeMl": 50, "sku": "BP-50", "price": 280 },
+      { "sizeMl": 100, "sku": "BP-100", "price": 380 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1588405748880-12d1d2a59d32?w=500",
+      "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=500"
+    ],
+    "notes": {
+      "top": ["Peach", "Blood Orange", "Cardamom"],
+      "middle": ["Rum", "Cognac", "Davana"],
+      "base": ["Patchouli", "Vetiver", "Suede"]
+    },
+    "longevity": "8-10 hours",
+    "sillage": "Strong",
+    "tags": ["fruity", "boozy", "modern"],
+    "rating": 4.5
+  },
+  {
+    "id": "18",
+    "title": "Black Opium",
+    "slug": "black-opium",
+    "description": "Sweet gourmand coffee-floral: coffee, vanilla, white florals and patchouli",
+    "brand": "Yves Saint Laurent",
+    "category": "Women",
+    "family": "Oriental",
+    "price": 180,
+    "sizes": [
+      { "sizeMl": 50, "sku": "BO-50", "price": 120 },
+      { "sizeMl": 100, "sku": "BO-100", "price": 180 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500",
+      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=500"
+    ],
+    "notes": {
+      "top": ["Pink Pepper", "Orange Blossom", "Pear"],
+      "middle": ["Coffee", "Jasmine", "Bitter Almond"],
+      "base": ["Vanilla", "Patchouli", "Cedar"]
+    },
+    "longevity": "7-9 hours",
+    "sillage": "Strong",
+    "tags": ["coffee", "sweet", "addictive"],
+    "rating": 4.6,
+    "featured": true
+  },
+  {
+    "id": "19",
+    "title": "Libre",
+    "slug": "libre",
+    "description": "Aromatic floral: lavender, orange blossom, jasmine and musk",
+    "brand": "Yves Saint Laurent",
+    "category": "Women",
+    "family": "Floral",
+    "price": 170,
+    "sizes": [
+      { "sizeMl": 50, "sku": "LIB-50", "price": 115 },
+      { "sizeMl": 100, "sku": "LIB-100", "price": 170 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500",
+      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=500"
+    ],
+    "notes": {
+      "top": ["Lavender", "Mandarin", "Blackcurrant"],
+      "middle": ["Orange Blossom", "Jasmine", "Orchid"],
+      "base": ["Musk", "Madagascar Vanilla", "Ambergris"]
+    },
+    "longevity": "6-8 hours",
+    "sillage": "Moderate",
+    "tags": ["aromatic", "modern", "feminine"],
+    "rating": 4.4
+  },
+  {
+    "id": "20",
+    "title": "Y Eau de Parfum",
+    "slug": "y-eau-de-parfum",
+    "description": "Fresh aromatic fougère: bergamot, ginger, sage, geranium and cedar",
+    "brand": "Yves Saint Laurent",
+    "category": "Men",
+    "family": "Fresh",
+    "price": 165,
+    "sizes": [
+      { "sizeMl": 50, "sku": "YEP-50", "price": 110 },
+      { "sizeMl": 100, "sku": "YEP-100", "price": 165 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500"
+    ],
+    "notes": {
+      "top": ["Bergamot", "Ginger", "Apple"],
+      "middle": ["Sage", "Geranium", "Violet Leaf"],
+      "base": ["Cedar", "Vetiver", "Amberwood"]
+    },
+    "longevity": "7-9 hours",
+    "sillage": "Strong",
+    "tags": ["fresh", "aromatic", "modern"],
+    "rating": 4.5
+  },
+  {
+    "id": "21",
+    "title": "La Nuit de l'Homme",
+    "slug": "la-nuit-de-lhomme",
+    "description": "Spicy oriental: cardamom, bergamot, cedar and lavender",
+    "brand": "Yves Saint Laurent",
+    "category": "Men",
+    "family": "Oriental",
+    "price": 155,
+    "sizes": [
+      { "sizeMl": 50, "sku": "LNH-50", "price": 105 },
+      { "sizeMl": 100, "sku": "LNH-100", "price": 155 }
+    ],
+    "concentration": "EDT",
+    "images": [
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500",
+      "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500"
+    ],
+    "notes": {
+      "top": ["Cardamom", "Bergamot"],
+      "middle": ["Lavender", "Cedar"],
+      "base": ["Vetiver", "Caraway"]
+    },
+    "longevity": "6-8 hours",
+    "sillage": "Moderate",
+    "tags": ["spicy", "evening", "seductive"],
+    "rating": 4.3
+  },
+  {
+    "id": "22",
+    "title": "Acqua di Gio",
+    "slug": "acqua-di-gio",
+    "description": "Aromatic aquatic: bergamot, neroli, marine notes, jasmine and patchouli",
+    "brand": "Giorgio Armani",
+    "category": "Men",
+    "family": "Fresh",
+    "price": 140,
+    "sizes": [
+      { "sizeMl": 50, "sku": "ADG-50", "price": 95 },
+      { "sizeMl": 100, "sku": "ADG-100", "price": 140 }
+    ],
+    "concentration": "EDT",
+    "images": [
+      "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500"
+    ],
+    "notes": {
+      "top": ["Lime", "Lemon", "Bergamot"],
+      "middle": ["Jasmine", "Calone", "Freesia"],
+      "base": ["White Musk", "Cedar", "Oakmoss"]
+    },
+    "longevity": "5-7 hours",
+    "sillage": "Moderate",
+    "tags": ["aquatic", "fresh", "classic"],
+    "rating": 4.4
+  },
+  {
+    "id": "23",
+    "title": "Acqua di Gio Profumo",
+    "slug": "acqua-di-gio-profumo",
+    "description": "Intense aquatic aromatic: bergamot, incense, patchouli and marine accords",
+    "brand": "Giorgio Armani",
+    "category": "Men",
+    "family": "Fresh",
+    "price": 180,
+    "sizes": [
+      { "sizeMl": 50, "sku": "ADGP-50", "price": 125 },
+      { "sizeMl": 100, "sku": "ADGP-100", "price": 180 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500"
+    ],
+    "notes": {
+      "top": ["Bergamot", "Aquatic Accord"],
+      "middle": ["Geranium", "Sage", "Rosemary"],
+      "base": ["Incense", "Patchouli", "Musk"]
+    },
+    "longevity": "7-9 hours",
+    "sillage": "Strong",
+    "tags": ["aquatic", "intense", "sophisticated"],
+    "rating": 4.6
+  },
+  {
+    "id": "24",
+    "title": "Sì Passione",
+    "slug": "si-passione",
+    "description": "Warm floral-fruity: blackcurrant, pear, rose and vanilla",
+    "brand": "Giorgio Armani",
+    "category": "Women",
+    "family": "Floral",
+    "price": 175,
+    "sizes": [
+      { "sizeMl": 50, "sku": "SP-50", "price": 120 },
+      { "sizeMl": 100, "sku": "SP-100", "price": 175 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500",
+      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=500"
+    ],
+    "notes": {
+      "top": ["Blackcurrant", "Pear", "Pink Pepper"],
+      "middle": ["Rose", "Jasmine", "Heliotrope"],
+      "base": ["Vanilla", "Cedar", "Amberwood"]
+    },
+    "longevity": "6-8 hours",
+    "sillage": "Moderate",
+    "tags": ["passionate", "fruity", "elegant"],
+    "rating": 4.4
+  },
+  {
+    "id": "25",
+    "title": "Armani Code",
+    "slug": "armani-code",
+    "description": "Oriental spicy: bergamot, star anise, tobacco, tonka and leather",
+    "brand": "Giorgio Armani",
+    "category": "Men",
+    "family": "Oriental",
+    "price": 150,
+    "sizes": [
+      { "sizeMl": 50, "sku": "AC-50", "price": 100 },
+      { "sizeMl": 100, "sku": "AC-100", "price": 150 }
+    ],
+    "concentration": "EDT",
+    "images": [
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500",
+      "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500"
+    ],
+    "notes": {
+      "top": ["Bergamot", "Lemon"],
+      "middle": ["Star Anise", "Olive Blossom"],
+      "base": ["Tobacco", "Tonka Bean", "Leather"]
+    },
+    "longevity": "6-8 hours",
+    "sillage": "Moderate",
+    "tags": ["oriental", "spicy", "seductive"],
+    "rating": 4.3
+  },
+  {
+    "id": "26",
+    "title": "Eros",
+    "slug": "eros",
+    "description": "Fresh oriental: mint, lemon, green apple, tonka bean and vanilla",
+    "brand": "Versace",
+    "category": "Men",
+    "family": "Oriental",
+    "price": 125,
+    "sizes": [
+      { "sizeMl": 50, "sku": "ER-50", "price": 85 },
+      { "sizeMl": 100, "sku": "ER-100", "price": 125 }
+    ],
+    "concentration": "EDT",
+    "images": [
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500",
+      "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500"
+    ],
+    "notes": {
+      "top": ["Mint", "Green Apple", "Lemon"],
+      "middle": ["Tonka Bean", "Ambroxan", "Geranium"],
+      "base": ["Madagascar Vanilla", "Vetiver", "Oakmoss", "Cedar"]
+    },
+    "longevity": "6-8 hours",
+    "sillage": "Strong",
+    "tags": ["sweet", "minty", "youthful"],
+    "rating": 4.3
+  },
+  {
+    "id": "27",
+    "title": "Bright Crystal",
+    "slug": "bright-crystal",
+    "description": "Fruity-floral aquatic: pomegranate, yuzu, peony and musk",
+    "brand": "Versace",
+    "category": "Women",
+    "family": "Floral",
+    "price": 115,
+    "sizes": [
+      { "sizeMl": 50, "sku": "BC-50", "price": 80 },
+      { "sizeMl": 100, "sku": "BC-100", "price": 115 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500",
+      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=500"
+    ],
+    "notes": {
+      "top": ["Pomegranate", "Yuzu", "Iced Accord"],
+      "middle": ["Peony", "Magnolia", "Lotus"],
+      "base": ["Musk", "Mahogany", "Amber"]
+    },
+    "longevity": "5-7 hours",
+    "sillage": "Moderate",
+    "tags": ["bright", "fruity", "aquatic"],
+    "rating": 4.2
+  },
+  {
+    "id": "28",
+    "title": "Dylan Blue",
+    "slug": "dylan-blue",
+    "description": "Aromatic fougère: bergamot, fig leaves, black pepper, patchouli and musk",
+    "brand": "Versace",
+    "category": "Men",
+    "family": "Fresh",
+    "price": 130,
+    "sizes": [
+      { "sizeMl": 50, "sku": "DB-50", "price": 90 },
+      { "sizeMl": 100, "sku": "DB-100", "price": 130 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500"
+    ],
+    "notes": {
+      "top": ["Bergamot", "Grapefruit", "Fig Leaves"],
+      "middle": ["Violet Leaf", "Black Pepper", "Papyrus"],
+      "base": ["Patchouli", "Musk", "Tonka Bean"]
+    },
+    "longevity": "7-9 hours",
+    "sillage": "Strong",
+    "tags": ["aromatic", "fresh", "modern"],
+    "rating": 4.4
+  },
+  {
+    "id": "29",
+    "title": "The Dreamer",
+    "slug": "the-dreamer",
+    "description": "Aromatic floral: tobacco, clary sage, cedar and rose",
+    "brand": "Versace",
+    "category": "Men",
+    "family": "Floral",
+    "price": 110,
+    "sizes": [
+      { "sizeMl": 50, "sku": "TD-50", "price": 75 },
+      { "sizeMl": 100, "sku": "TD-100", "price": 110 }
+    ],
+    "concentration": "EDT",
+    "images": [
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500",
+      "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500"
+    ],
+    "notes": {
+      "top": ["Clary Sage", "Mandarin"],
+      "middle": ["Geranium", "Rose", "Tobacco"],
+      "base": ["Cedar", "Fir Balsam", "Tonka Bean"]
+    },
+    "longevity": "6-8 hours",
+    "sillage": "Moderate",
+    "tags": ["dreamy", "floral", "unique"],
+    "rating": 4.1
+  },
+  {
+    "id": "30",
+    "title": "Aventus",
+    "slug": "aventus",
+    "description": "Fruity woody chypre: pineapple, bergamot, birch, musk and oakmoss",
+    "brand": "Creed",
+    "category": "Men",
+    "family": "Fresh",
+    "price": 520,
+    "sizes": [
+      { "sizeMl": 50, "sku": "AV-50", "price": 350 },
+      { "sizeMl": 100, "sku": "AV-100", "price": 520 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500"
+    ],
+    "notes": {
+      "top": ["Pineapple", "Bergamot", "Apple", "Blackcurrant"],
+      "middle": ["Juniper", "Birch", "Patchouli", "Jasmine"],
+      "base": ["Musk", "Oakmoss", "Ambergris", "Vanilla"]
+    },
+    "longevity": "8-10 hours",
+    "sillage": "Strong",
+    "tags": ["fruity", "smoky", "legendary"],
+    "rating": 4.9,
+    "featured": true
+  },
+  {
+    "id": "31",
+    "title": "Aventus for Her",
+    "slug": "aventus-for-her",
+    "description": "Fruity floral: green apple, bergamot, patchouli and musk",
+    "brand": "Creed",
+    "category": "Women",
+    "family": "Floral",
+    "price": 480,
+    "sizes": [
+      { "sizeMl": 50, "sku": "AFH-50", "price": 320 },
+      { "sizeMl": 100, "sku": "AFH-100", "price": 480 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500",
+      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=500"
+    ],
+    "notes": {
+      "top": ["Green Apple", "Bergamot", "Pink Pepper"],
+      "middle": ["Rose", "Sandalwood", "Styrax"],
+      "base": ["Patchouli", "Musk", "Ambergris"]
+    },
+    "longevity": "7-9 hours",
+    "sillage": "Strong",
+    "tags": ["fruity", "elegant", "luxurious"],
+    "rating": 4.6
+  },
+  {
+    "id": "32",
+    "title": "Green Irish Tweed",
+    "slug": "green-irish-tweed",
+    "description": "Fresh green fougère: iris, violet leaf, lemon and sandalwood",
+    "brand": "Creed",
+    "category": "Men",
+    "family": "Fresh",
+    "price": 450,
+    "sizes": [
+      { "sizeMl": 50, "sku": "GIT-50", "price": 300 },
+      { "sizeMl": 100, "sku": "GIT-100", "price": 450 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500"
+    ],
+    "notes": {
+      "top": ["Lemon", "Verbena", "Peppermint"],
+      "middle": ["Violet Leaf", "Iris"],
+      "base": ["Sandalwood", "Ambergris"]
+    },
+    "longevity": "7-9 hours",
+    "sillage": "Strong",
+    "tags": ["green", "fresh", "classic"],
+    "rating": 4.7
+  },
+  {
+    "id": "33",
+    "title": "Silver Mountain Water",
+    "slug": "silver-mountain-water",
+    "description": "Fresh aromatic: bergamot, mandarin, green tea and blackcurrant",
+    "brand": "Creed",
+    "category": "Unisex",
+    "family": "Fresh",
+    "price": 420,
+    "sizes": [
+      { "sizeMl": 50, "sku": "SMW-50", "price": 280 },
+      { "sizeMl": 100, "sku": "SMW-100", "price": 420 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1588405748880-12d1d2a59d32?w=500",
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500"
+    ],
+    "notes": {
+      "top": ["Bergamot", "Mandarin", "Neroli"],
+      "middle": ["Green Tea", "Blackcurrant", "Sandalwood"],
+      "base": ["Musk", "Petitgrain"]
+    },
+    "longevity": "6-8 hours",
+    "sillage": "Moderate",
+    "tags": ["fresh", "clean", "unisex"],
+    "rating": 4.5
+  },
+  {
+    "id": "34",
+    "title": "Khamrah",
+    "slug": "khamrah",
+    "description": "Rich oriental amber: oud-like resins, spices, amber and sweet balsams",
+    "brand": "Lattafa Perfumes",
+    "category": "Unisex",
+    "family": "Oriental",
+    "price": 45,
+    "sizes": [
+      { "sizeMl": 50, "sku": "KH-50", "price": 35 },
+      { "sizeMl": 100, "sku": "KH-100", "price": 45 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=500",
+      "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500"
+    ],
+    "notes": {
+      "top": ["Cinnamon", "Nutmeg", "Cardamom"],
+      "middle": ["Dates", "Praline", "Tuberose"],
+      "base": ["Vanilla", "Tonka Bean", "Benzoin", "Myrrh", "Ambergris"]
+    },
+    "longevity": "10-12 hours",
+    "sillage": "Very Strong",
+    "tags": ["sweet", "spicy", "affordable"],
+    "rating": 4.7,
+    "featured": true
+  },
+  {
+    "id": "35",
+    "title": "Asad",
+    "slug": "asad",
+    "description": "Powerful woody oriental: oud, spices, leather and woods",
+    "brand": "Lattafa Perfumes",
+    "category": "Men",
+    "family": "Oriental",
+    "price": 40,
+    "sizes": [
+      { "sizeMl": 50, "sku": "AS-50", "price": 30 },
+      { "sizeMl": 100, "sku": "AS-100", "price": 40 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500",
+      "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500"
+    ],
+    "notes": {
+      "top": ["Bergamot", "Saffron"],
+      "middle": ["Oud", "Rose", "Spices"],
+      "base": ["Leather", "Amber", "Woods"]
+    },
+    "longevity": "9-11 hours",
+    "sillage": "Very Strong",
+    "tags": ["powerful", "oud", "masculine"],
+    "rating": 4.5
+  },
+  {
+    "id": "36",
+    "title": "Hawas for Him",
+    "slug": "hawas-for-him",
+    "description": "Fresh aquatic fruity: bergamot, apple, lavender and woody musks",
+    "brand": "Rasasi",
+    "category": "Men",
+    "family": "Fresh",
+    "price": 35,
+    "sizes": [
+      { "sizeMl": 50, "sku": "HFH-50", "price": 25 },
+      { "sizeMl": 100, "sku": "HFH-100", "price": 35 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500"
+    ],
+    "notes": {
+      "top": ["Apple", "Bergamot", "Lemon", "Cinnamon"],
+      "middle": ["Cardamom", "Orange Blossom", "Plum"],
+      "base": ["Ambergris", "Musk", "Driftwood"]
+    },
+    "longevity": "7-9 hours",
+    "sillage": "Moderate",
+    "tags": ["fresh", "fruity", "affordable"],
+    "rating": 4.4
+  },
+  {
+    "id": "37",
+    "title": "9PM",
+    "slug": "9pm",
+    "description": "Fruity spicy oud: plum, spices, oud and warm amber",
+    "brand": "Afnan",
+    "category": "Men",
+    "family": "Oriental",
+    "price": 40,
+    "sizes": [
+      { "sizeMl": 50, "sku": "9PM-50", "price": 30 },
+      { "sizeMl": 100, "sku": "9PM-100", "price": 40 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500",
+      "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500"
+    ],
+    "notes": {
+      "top": ["Apple", "Cinnamon", "Lavender"],
+      "middle": ["Orange Blossom", "Vanilla"],
+      "base": ["Vanilla", "Benzoin", "Tonka Bean"]
+    },
+    "longevity": "8-10 hours",
+    "sillage": "Strong",
+    "tags": ["evening", "sweet", "affordable"],
+    "rating": 4.5,
+    "featured": true
+  },
+  {
+    "id": "38",
+    "title": "Baccarat Rouge 540",
+    "slug": "baccarat-rouge-540",
+    "description": "Amber floral woody: saffron, jasmine, ambergris and cedar",
+    "brand": "Maison Francis Kurkdjian (MFK)",
+    "category": "Unisex",
+    "family": "Oriental",
+    "price": 450,
+    "sizes": [
+      { "sizeMl": 50, "sku": "BR540-50", "price": 300 },
+      { "sizeMl": 100, "sku": "BR540-100", "price": 450 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500",
+      "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=500"
+    ],
+    "notes": {
+      "top": ["Saffron", "Jasmine"],
+      "middle": ["Amberwood", "Ambergris"],
+      "base": ["Fir Resin", "Cedar"]
+    },
+    "longevity": "8-10 hours",
+    "sillage": "Strong",
+    "tags": ["luxury", "unique", "sophisticated"],
+    "rating": 4.8,
+    "featured": true
+  },
+  {
+    "id": "39",
+    "title": "Santal 33",
+    "slug": "santal-33",
+    "description": "Creamy woody: sandalwood, cardamom, iris and leather facets",
+    "brand": "Le Labo",
+    "category": "Unisex",
+    "family": "Woody",
+    "price": 380,
+    "sizes": [
+      { "sizeMl": 50, "sku": "S33-50", "price": 220 },
+      { "sizeMl": 100, "sku": "S33-100", "price": 380 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500",
+      "https://images.unsplash.com/photo-1588405748880-12d1d2a59d32?w=500"
+    ],
+    "notes": {
+      "top": ["Cardamom", "Iris", "Violet"],
+      "middle": ["Sandalwood", "Papyrus", "Cedarwood"],
+      "base": ["Leather", "Amber"]
+    },
+    "longevity": "6-8 hours",
+    "sillage": "Moderate",
+    "tags": ["woody", "unisex", "trendy"],
+    "rating": 4.5,
+    "featured": true
+  },
+  {
+    "id": "40",
+    "title": "Layton",
+    "slug": "layton",
+    "description": "Spicy oriental: bergamot, apple, lavender, vanilla and pepper",
+    "brand": "PDM (Parfums de Marly)",
+    "category": "Men",
+    "family": "Oriental",
+    "price": 420,
+    "sizes": [
+      { "sizeMl": 50, "sku": "LAY-50", "price": 280 },
+      { "sizeMl": 100, "sku": "LAY-100", "price": 420 }
+    ],
+    "concentration": "EDP",
+    "images": [
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500",
+      "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500"
+    ],
+    "notes": {
+      "top": ["Apple", "Lavender", "Mandarin"],
+      "middle": ["Geranium", "Violet", "Jasmine"],
+      "base": ["Vanilla", "Cardamom", "Sandalwood", "Pepper"]
+    },
+    "longevity": "8-10 hours",
+    "sillage": "Strong",
+    "tags": ["sweet", "powdery", "elegant"],
+    "rating": 4.7
+  }
+]
