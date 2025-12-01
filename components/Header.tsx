@@ -12,9 +12,9 @@ interface NavigationItem {
 
 export default function Header(): JSX.Element {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const cartItems = useAppSelector((state) => state.cart.items);
-  const user = useAppSelector((state) => state.user.user);
-  const cartItemCount: number = cartItems.reduce((total: number, item) => total + item.quantity, 0);
+  const cartItems = useAppSelector((state: any) => state.cart.items);
+  const user = useAppSelector((state: any) => state.user.user);
+  const cartItemCount: number = cartItems.reduce((total: number, item: any) => total + item.quantity, 0);
 
   const navigation: NavigationItem[] = [
     { name: 'Home', href: '/' },

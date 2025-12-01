@@ -18,8 +18,8 @@ import {
 export default function OrdersPage() {
   const router = useRouter();
   const dispatch = useAppDispatch();
-  const user = useAppSelector((state) => state.user.user);
-  const orders = useAppSelector((state) => state.user.orders);
+  const user = useAppSelector((state: any) => state.user.user);
+  const orders = useAppSelector((state: any) => state.user.orders);
 
   // ✅ Redirect only on client
   useEffect(() => {
@@ -138,7 +138,7 @@ export default function OrdersPage() {
               </div>
             ) : (
               <div className="space-y-6">
-                {orders.map((order) => (
+                {orders.map((order: any) => (
                   <div key={order.id} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
                     {/* Order Header */}
                     <div className="px-6 py-4 bg-gray-50 border-b border-gray-200">
@@ -177,7 +177,7 @@ export default function OrdersPage() {
                     {/* Order Items */}
                     <div className="p-6">
                       <div className="space-y-4">
-                        {order.items.map((item) => (
+                        {order.items.map((item: any) => (
                           <div key={item.id} className="flex items-center space-x-4">
                             <div className="w-16 h-16 bg-gray-100 rounded-lg flex-shrink-0"></div>
                             <div className="flex-1 min-w-0">
