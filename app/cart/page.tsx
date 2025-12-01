@@ -9,7 +9,7 @@ import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 export default function CartPage() {
   const { items, total } = useAppSelector((state) => state.cart);
   
-  const shipping : numbergi = 0; // Free shipping for demo
+  const shipping  = 0 as number; // Free shipping for demo
   const tax = total * 0.08; // 8% tax for demo
   const finalTotal = total + shipping + tax;
 
