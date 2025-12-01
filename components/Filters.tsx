@@ -31,11 +31,11 @@ export default function Filters({ products }: FiltersProps) {
   });
 
   // Extract unique values from products
-  const uniqueCategories = [...new Set(products.map(p => p.category))];
-  const uniqueFamilies = [...new Set(products.map(p => p.family))];
-  const uniqueConcentrations = [...new Set(products.map(p => p.concentration))];
-  const uniqueSizes = [...new Set(products.flatMap(p => p.sizes.map(s => s.sizeMl)))].sort((a, b) => a - b);
-  const uniqueBrands = [...new Set(products.map(p => p.brand))].sort();
+  const uniqueCategories = Array.from(new Set(products.map(p => p.category)));
+  const uniqueFamilies = Array.from(new Set(products.map(p => p.family)));
+  const uniqueConcentrations = Array.from(new Set(products.map(p => p.concentration)));
+  const uniqueSizes = Array.from(new Set(products.flatMap(p => p.sizes.map((s: any) => s.sizeMl)))).sort((a, b) => a - b);
+  const uniqueBrands = Array.from(new Set(products.map(p => p.brand))).sort();
 
   const toggleSection = (section: keyof typeof expandedSections) => {
     setExpandedSections(prev => ({
