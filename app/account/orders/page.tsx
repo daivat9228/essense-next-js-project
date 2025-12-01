@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAppSelector, useAppDispatch } from '@/store';
@@ -20,9 +21,15 @@ export default function OrdersPage() {
   const user = useAppSelector((state) => state.user.user);
   const orders = useAppSelector((state) => state.user.orders);
 
-  // Redirect if not logged in
+  // ✅ Redirect only on client
+  useEffect(() => {
+    if (!user) {
+      router.push('/account/sign-in');
+    }
+  }, [user, router]);
+
+  // While deciding / redirecting, don't render anything
   if (!user) {
-    router.push('/account/sign-in');
     return null;
   }
 

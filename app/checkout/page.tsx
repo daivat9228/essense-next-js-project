@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAppSelector, useAppDispatch } from '@/store';
 import { clearCart } from '@/store/slices/cartSlice';
@@ -32,11 +32,21 @@ export default function CheckoutPage() {
   const tax = total * 0.08;
   const finalTotal = total + shipping + tax;
 
+  // ✅ Redirect to /cart only on client if cart is empty
+  useEffect(() => {
+    if (items.length === 0) {
+      router.push('/cart');
+    }
+  }, [items.length, router]);
+
+  if (items.length === 0) {
+    return null;
+  }
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
-    // Clear error when user starts typing
     if (errors[name as keyof ShippingAddress]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
@@ -65,10 +75,8 @@ export default function CheckoutPage() {
     
     setIsSubmitting(true);
     
-    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
     
-    // Create order
     const order = {
       id: `ORD-${Date.now()}`,
       items: [...items],
@@ -81,14 +89,8 @@ export default function CheckoutPage() {
     dispatch(addOrder(order));
     dispatch(clearCart());
     
-    // Redirect to confirmation
     router.push(`/checkout/confirmation?orderId=${order.id}`);
   };
-
-  if (items.length === 0) {
-    router.push('/cart');
-    return null;
-  }
 
   return (
     <div className="min-h-screen bg-gray-50">
