@@ -10,20 +10,6 @@ import ProductGrid from '@/components/ProductGrid';
 
 export default function HomePage() {
 
-  //   const dispatch = useAppDispatch();
-  // const { items: products, loading } = useAppSelector((state) => state.products);
-
-  // useEffect(() => {
-  //   dispatch(fetchProducts());
-  // }, [dispatch]);
-
-  // const featuredProducts = products.filter(product => product.featured).slice(0, 4);
-
-  // const displayProducts = loading || featuredProducts.length > 0 ? featuredProducts : products.slice(0, 4);
-  
-  // const newArrivals = products.slice(0, 8);
-
-  
   const dispatch = useAppDispatch();
   const { items: products, loading } = useAppSelector((state) => state.products);
 
@@ -83,11 +69,11 @@ export default function HomePage() {
               >
                 Shop All Fragrances
               </Link>
-              <Link
-                href="/catalog?category=Niche"
+               <Link
+                href="/catalog?category=Unisex"
                 className="border-2 border-white text-white hover:bg-white hover:text-primary-900 font-semibold py-3 px-8 rounded-lg transition-colors text-center"
               >
-                Explore Niche Collection
+                Explore Unisex Collection
               </Link>
             </div>
           </div>
