@@ -17,7 +17,6 @@ export default function Header(): JSX.Element {
   const cartItemCount: number = cartItems.reduce((total: number, item: any) => total + item.quantity, 0);
 
   const navigation: NavigationItem[] = [
-    { name: 'Home', href: '/' },
     { name: 'Catalog', href: '/catalog' },
     { name: 'Men', href: '/catalog?category=Men' },
     { name: 'Women', href: '/catalog?category=Women' },
