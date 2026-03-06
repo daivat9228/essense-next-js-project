@@ -29,12 +29,14 @@ export default function ProductDetailPage() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState<any>(null);
   const [quantity, setQuantity] = useState(1);
+  const [activeTab, setActiveTab] = useState("description");
+
+  // product must be declared BEFORE isLiked to avoid temporal dead zone
+  const product = products.find((p) => p.slug === params.slug);
+
   const isLiked = useAppSelector((state) =>
     product ? state.wishlist.items.includes(product.id) : false
   );
-  const [activeTab, setActiveTab] = useState("description");
-
-  const product = products.find((p) => p.slug === params.slug);
 
   useEffect(() => {
     if (products.length === 0) {
