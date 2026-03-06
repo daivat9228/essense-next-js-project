@@ -8,24 +8,12 @@ import { fetchProducts } from "@/store/slices/productsSlice";
 import ProductGrid from "@/components/ProductGrid";
 
 export default function HomePage() {
-  //   const dispatch = useAppDispatch();
-  // const { items: products, loading } = useAppSelector((state) => state.products);
 
-  // useEffect(() => {
-  //   dispatch(fetchProducts());
-  // }, [dispatch]);
-
-  // const featuredProducts = products.filter(product => product.featured).slice(0, 4);
-
-  // const displayProducts = loading || featuredProducts.length > 0 ? featuredProducts : products.slice(0, 4);
-
-  // const newArrivals = products.slice(0, 8);
-
-  const dispatch = useAppDispatch(); // useAppDispatch hook is used to dispatch actions to the store, 
+  const dispatch = useAppDispatch(); 
   const { items: products, loading } = useAppSelector(
     (state) => state.products,
-  ); // useAppSelector hook is used to select state from the store
-
+  ); 
+  
   // Fetch only if we don't already have products and not currently loading
   useEffect(() => {
     if (!products.length && !loading) {
