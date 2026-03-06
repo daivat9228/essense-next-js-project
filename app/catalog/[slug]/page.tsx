@@ -252,10 +252,10 @@ export default function ProductDetailPage() {
             {/* Quantity */}
             <div>
               <h3 className="font-medium text-gray-900 mb-3">Quantity</h3>
-              <div className="flex items-center border border-gray-300 rounded-lg w-30">
+              <div className="flex items-center border border-gray-300 rounded-lg w-32">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="px-3 py-2 text-gray-600 hover:text-gray-800"
+                  className="px-4 py-2 text-gray-600 hover:text-gray-800"
                 >
                   −
                 </button>
@@ -264,7 +264,7 @@ export default function ProductDetailPage() {
                 </span>
                 <button
                   onClick={() => setQuantity(quantity + 1)}
-                  className="px-3 py-2 text-gray-600 hover:text-gray-800"
+                  className="px-4 py-2 text-gray-600 hover:text-gray-800"
                 >
                   +
                 </button>
