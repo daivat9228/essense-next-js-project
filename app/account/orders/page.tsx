@@ -35,7 +35,7 @@ export default function OrdersPage() {
 
   const handleLogout = () => {
     dispatch(logout());
-    router.push('/');
+    router.push('/account/sign-in');
   };
 
   const getStatusIcon = (status: string) => {

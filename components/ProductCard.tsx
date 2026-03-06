@@ -16,28 +16,30 @@ interface ProductCardProps {
 }
 
 function ProductCard({ product }: ProductCardProps) {
-  const wishlistItems = useAppSelector((state) => state.wishlist.items);
-  const isLiked = wishlistItems.includes(product.id);
-  const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
-  const dispatch = useAppDispatch();
+  
+  const wishlistItems = useAppSelector((state) => state.wishlist.items);  
+  const isLiked = wishlistItems.includes(product.id);  
+  const [selectedSize, setSelectedSize] = useState(product.sizes[0]);  
 
-  const handleQuickAdd = useCallback(
-    (e: React.MouseEvent) => {
-      e.preventDefault(); // Browser ka default action (jaise link open hona ya form submit) stop karta hai
-      e.stopPropagation(); // Event ko parent element tak bubble hone se rokta hai (Link click trigger nahi hota)
+  const dispatch = useAppDispatch();  
 
-      dispatch(
-        addItem({
-          id: `${product.id}-${selectedSize.sizeMl}`,
-          productId: product.id,
-          title: product.title,
-          brand: product.brand,
-          image: product.images[0],
-          size: selectedSize.sizeMl,
-          concentration: product.concentration,
-          price: selectedSize.price,
-        })
-      );
+  const handleQuickAdd = useCallback( 
+    (e: React.MouseEvent) => {  
+      e.preventDefault();   
+      e.stopPropagation();  
+                      
+            dispatch(
+              addItem({
+                id: `${product.id}-${selectedSize.sizeMl}`, 
+                productId: product.id,                     
+                title: product.title,                        
+                brand: product.brand,                         
+                image: product.images[0],                     
+                size: selectedSize.sizeMl,                    
+                concentration: product.concentration,         
+                price: selectedSize.price,                   
+              })
+            );
     },
     [dispatch, product, selectedSize]
   );
@@ -46,13 +48,12 @@ function ProductCard({ product }: ProductCardProps) {
     (e: React.MouseEvent) => {
       e.preventDefault();
       e.stopPropagation();
-      dispatch(toggleWishlistItem(product.id));
+      dispatch(toggleWishlistItem(product.id)); 
     },
-    [dispatch, product.id]
+    [dispatch, product.id],
   );
 
-  const hasDiscount = !!product.salePrice;
-
+  const hasDiscount = !!product.salePrice; 
   return (
     <div className="group relative bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
       <Link href={`/catalog/${product.slug}`}>
@@ -124,10 +125,11 @@ function ProductCard({ product }: ProductCardProps) {
             <select
               value={selectedSize.sizeMl}
               onChange={(e) => {
-                // e.preventDefault();  not really nedded
+
                 e.stopPropagation();
+
                 const selected = product.sizes.find(
-                  (s) => s.sizeMl === Number(e.target.value)
+                  (s) => s.sizeMl === Number(e.target.value),
                 );
                 if (selected) setSelectedSize(selected);
               }}

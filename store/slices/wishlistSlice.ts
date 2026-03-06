@@ -39,16 +39,16 @@ const wishlistSlice = createSlice({
   initialState: loadWishlistFromStorage(),
   reducers: {
     toggleWishlistItem: (state, action: PayloadAction<string>) => {
-      const productId = action.payload;
-      const index = state.items.indexOf(productId);
+      const productId = action.payload; // get product id from action payload, જો product id એરે માં હોય તો તેની સ્ટેટ રોકી શકાય
+      const index = state.items.indexOf(productId); // get index of product id in wishlist, જો product id એરે માં હોય તો તેની સ્ટેટ રોકી શકાય
       
       if (index > -1) {
-        state.items.splice(index, 1);
+        state.items.splice(index, 1); // remove product id from wishlist, જો product id એરે માં હોય તો તેની સ્ટેટ રોકી શકાય
       } else {
-        state.items.push(productId);
+        state.items.push(productId); // add product id to wishlist, જો product id એરે માં હોય તો તેની સ્ટેટ રોકી શકાય
       }
       
-      saveWishlistToStorage(state);
+      saveWishlistToStorage(state); // save wishlist to localStorage, જો product id એરે માં હોય તો તેની સ્ટેટ રોકી શકાય
     },
     removeFromWishlist: (state, action: PayloadAction<string>) => {
       state.items = state.items.filter(id => id !== action.payload);

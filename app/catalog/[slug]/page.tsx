@@ -1,30 +1,40 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
-import Image from 'next/image';
-import { useAppDispatch, useAppSelector } from '@/store';
-import { fetchProducts } from '@/store/slices/productsSlice';
-import { addItem } from '@/store/slices/cartSlice';
-import { Product } from '@/types';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import NotesBadge from '@/components/NotesBadge';
-import ProductGrid from '@/components/ProductGrid';
-import { HeartIcon, ShoppingBagIcon, StarIcon } from '@heroicons/react/24/outline';
-import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import Image from "next/image";
+import { useAppDispatch, useAppSelector } from "@/store";
+import { fetchProducts } from "@/store/slices/productsSlice";
+import { addItem } from "@/store/slices/cartSlice";
+import { toggleWishlistItem } from "@/store/slices/wishlistSlice";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import NotesBadge from "@/components/NotesBadge";
+import ProductGrid from "@/components/ProductGrid";
+import {
+  HeartIcon,
+  ShoppingBagIcon,
+  StarIcon,
+} from "@heroicons/react/24/outline";
+import { HeartIcon as HeartSolidIcon } from "@heroicons/react/24/solid";
+
 
 export default function ProductDetailPage() {
   const params = useParams();
   const dispatch = useAppDispatch();
-  const { items: products, loading } = useAppSelector((state) => state.products);
   
+  const { items: products, loading } = useAppSelector(
+    (state) => state.products,
+  );
+
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState<any>(null);
   const [quantity, setQuantity] = useState(1);
-  const [isLiked, setIsLiked] = useState(false);
-  const [activeTab, setActiveTab] = useState('description');
+  const isLiked = useAppSelector((state) =>
+    product ? state.wishlist.items.includes(product.id) : false
+  );
+  const [activeTab, setActiveTab] = useState("description");
 
-  const product = products.find(p => p.slug === params.slug);
+  const product = products.find((p) => p.slug === params.slug);
 
   useEffect(() => {
     if (products.length === 0) {
@@ -38,7 +48,6 @@ export default function ProductDetailPage() {
     }
   }, [product, selectedSize]);
 
-  
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50">
@@ -64,8 +73,12 @@ export default function ProductDetailPage() {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Product not found</h1>
-          <p className="text-gray-600">The fragrance you're looking for doesn't exist.</p>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            Product not found
+          </h1>
+          <p className="text-gray-600">
+            The fragrance you're looking for doesn't exist.
+          </p>
         </div>
       </div>
     );
@@ -73,25 +86,28 @@ export default function ProductDetailPage() {
 
   const handleAddToCart = () => {
     if (!selectedSize) return;
-    
-    dispatch(addItem({
-      id: `${product.id}-${selectedSize.sizeMl}`,
-      productId: product.id,
-      title: product.title,
-      brand: product.brand,
-      image: product.images[0],
-      size: selectedSize.sizeMl,
-      concentration: product.concentration,
-      price: selectedSize.price,
-      quantity,
-    }));
+
+    dispatch(
+      addItem({
+        id: `${product.id}-${selectedSize.sizeMl}`,
+        productId: product.id,
+        title: product.title,
+        brand: product.brand,
+        image: product.images[0],
+        size: selectedSize.sizeMl,
+        concentration: product.concentration,
+        price: selectedSize.price,
+        quantity,
+      }),
+    );
   };
 
   // Related products (same family or brand)
   const relatedProducts = products
-    .filter(p => 
-      p.id !== product.id && 
-      (p.family === product.family || p.brand === product.brand)
+    .filter(
+      (p) =>
+        p.id !== product.id &&
+        (p.family === product.family || p.brand === product.brand),
     )
     .slice(0, 4);
 
@@ -103,11 +119,11 @@ export default function ProductDetailPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Breadcrumbs */}
         <div className="mb-6">
-          <Breadcrumbs 
+          <Breadcrumbs
             items={[
-              { label: 'Catalog', href: '/catalog' },
-              { label: product.title }
-            ]} 
+              { label: "Catalog", href: "/catalog" },
+              { label: product.title },
+            ]}
           />
         </div>
 
@@ -126,7 +142,7 @@ export default function ProductDetailPage() {
                 priority
               />
             </div>
-            
+
             {/* Thumbnail Images */}
             {product.images.length > 1 && (
               <div className="flex space-x-4">
@@ -135,7 +151,9 @@ export default function ProductDetailPage() {
                     key={index}
                     onClick={() => setSelectedImageIndex(index)}
                     className={`relative w-20 h-20 rounded-lg overflow-hidden ${
-                      selectedImageIndex === index ? 'ring-2 ring-primary-600' : ''
+                      selectedImageIndex === index
+                        ? "ring-2 ring-primary-600"
+                        : ""
                     }`}
                   >
                     <Image
@@ -165,7 +183,9 @@ export default function ProductDetailPage() {
                     <StarIcon
                       key={i}
                       className={`h-5 w-5 ${
-                        i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'
+                        i < Math.floor(product.rating)
+                          ? "text-yellow-400 fill-current"
+                          : "text-gray-300"
                       }`}
                     />
                   ))}
@@ -194,10 +214,12 @@ export default function ProductDetailPage() {
             {/* Concentration and Details */}
             <div className="space-y-2">
               <p className="text-gray-700">
-                <span className="font-medium">Concentration:</span> {product.concentration}
+                <span className="font-medium">Concentration:</span>{" "}
+                {product.concentration}
               </p>
               <p className="text-gray-700">
-                <span className="font-medium">Longevity:</span> {product.longevity}
+                <span className="font-medium">Longevity:</span>{" "}
+                {product.longevity}
               </p>
               <p className="text-gray-700">
                 <span className="font-medium">Sillage:</span> {product.sillage}
@@ -214,8 +236,8 @@ export default function ProductDetailPage() {
                     onClick={() => setSelectedSize(size)}
                     className={`p-3 text-center border rounded-lg transition-colors ${
                       selectedSize?.sku === size.sku
-                        ? 'border-primary-600 bg-primary-50 text-primary-600'
-                        : 'border-gray-300 hover:border-gray-400'
+                        ? "border-primary-600 bg-primary-50 text-primary-600"
+                        : "border-gray-300 hover:border-gray-400"
                     }`}
                   >
                     <div className="font-medium">{size.sizeMl}ml</div>
@@ -257,7 +279,7 @@ export default function ProductDetailPage() {
                 <span>Add to Cart</span>
               </button>
               <button
-                onClick={() => setIsLiked(!isLiked)}
+                onClick={() => dispatch(toggleWishlistItem(product.id))}
                 className="p-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
               >
                 {isLiked ? (
@@ -275,17 +297,17 @@ export default function ProductDetailPage() {
           <div className="border-b border-gray-200">
             <nav className="flex space-x-8">
               {[
-                { id: 'description', label: 'Description' },
-                { id: 'notes', label: 'Notes' },
-                { id: 'reviews', label: 'Reviews' },
+                { id: "description", label: "Description" },
+                { id: "notes", label: "Notes" },
+                { id: "reviews", label: "Reviews" },
               ].map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`py-4 px-1 border-b-2 font-medium text-sm ${
                     activeTab === tab.id
-                      ? 'border-primary-600 text-primary-600'
-                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                      ? "border-primary-600 text-primary-600"
+                      : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
                   }`}
                 >
                   {tab.label}
@@ -295,7 +317,7 @@ export default function ProductDetailPage() {
           </div>
 
           <div className="py-8">
-            {activeTab === 'description' && (
+            {activeTab === "description" && (
               <div className="prose max-w-none">
                 <p className="text-gray-700 text-lg leading-relaxed">
                   {product.description}
@@ -306,7 +328,9 @@ export default function ProductDetailPage() {
                     <p className="text-gray-600">{product.category}</p>
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-2">Fragrance Family</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">
+                      Fragrance Family
+                    </h4>
                     <p className="text-gray-600">{product.family}</p>
                   </div>
                   <div>
@@ -326,13 +350,13 @@ export default function ProductDetailPage() {
               </div>
             )}
 
-            {activeTab === 'notes' && (
+            {activeTab === "notes" && (
               <div>
                 <NotesBadge notes={product.notes} />
               </div>
             )}
 
-            {activeTab === 'reviews' && (
+            {activeTab === "reviews" && (
               <div className="text-center py-12">
                 <p className="text-gray-600">Reviews feature coming soon!</p>
               </div>

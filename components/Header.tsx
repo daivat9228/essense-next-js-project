@@ -11,13 +11,14 @@ interface NavigationItem {
 }
 
 export default function Header(): JSX.Element {
+
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const cartItems = useAppSelector((state: any) => state.cart.items);
   const user = useAppSelector((state: any) => state.user.user);
+  
   const cartItemCount: number = cartItems.reduce((total: number, item: any) => total + item.quantity, 0);
 
   const navigation: NavigationItem[] = [
-    { name: 'Home', href: '/' },
     { name: 'Catalog', href: '/catalog' },
     { name: 'Men', href: '/catalog?category=Men' },
     { name: 'Women', href: '/catalog?category=Women' },
@@ -70,7 +71,8 @@ export default function Header(): JSX.Element {
             {/* User account */}
             <Link
               href="/wishlist"
-              className="p-2 text-gray-700 hover:text-primary-600 transition-colors"
+              className="p-2 text-gray-700 hover:text-prim
+              ary-600 transition-colors"
             >
               <HeartIcon className="h-6 w-6" />
             </Link>

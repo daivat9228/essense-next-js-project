@@ -41,6 +41,13 @@ const calculateTotal = (items: CartItem[]): number => {
   return items.reduce((total, item) => total + item.price * item.quantity, 0);
 };
 
+/*
+  THEORETICAL EXPLANATION:
+  calculateTotal ફંક્શન કાર્ટમાં રહેલી બધી પ્રોડક્ટ્સનું કુલ બિલ ગણવા માટે 'reduce' હાયર-ઓર્ડર ફંક્શનનો ઉપયોગ કરે છે. 
+  તે દરેક આઈટમની કિંમત (price) અને તેની સંખ્યા (quantity) નો ગુણાકાર કરીને તેને એક 'accumulator' (total) માં 
+  ઉમેરતું જાય છે. શરૂઆતની કિંમત 0 રાખવામાં આવી છે જેથી ચોક્કસ ગણતરી મળી શકે.
+*/
+
 const cartSlice = createSlice({
   name: 'cart',
   initialState: loadCartFromStorage(),
@@ -60,6 +67,7 @@ const cartSlice = createSlice({
       state.total = calculateTotal(state.items);
       saveCartToStorage(state);
     },
+
     removeItem: (state, action: PayloadAction<{ productId: string; size: number }>) => {
       const { productId, size } = action.payload;
       state.items = state.items.filter(
@@ -68,6 +76,7 @@ const cartSlice = createSlice({
       state.total = calculateTotal(state.items);
       saveCartToStorage(state);
     },
+    
     updateQuantity: (state, action: PayloadAction<{ productId: string; size: number; quantity: number }>) => {
       const { productId, size, quantity } = action.payload;
       const item = state.items.find(

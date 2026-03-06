@@ -1,15 +1,13 @@
-'use client';
+"use client";
 
-import { useEffect, useMemo } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useAppDispatch, useAppSelector } from '@/store';
-import { fetchProducts } from '@/store/slices/productsSlice';
-import ProductGrid from '@/components/ProductGrid';
-
+import { useEffect, useMemo } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { useAppDispatch, useAppSelector } from "@/store";
+import { fetchProducts } from "@/store/slices/productsSlice";
+import ProductGrid from "@/components/ProductGrid";
 
 export default function HomePage() {
-
   //   const dispatch = useAppDispatch();
   // const { items: products, loading } = useAppSelector((state) => state.products);
 
@@ -20,21 +18,20 @@ export default function HomePage() {
   // const featuredProducts = products.filter(product => product.featured).slice(0, 4);
 
   // const displayProducts = loading || featuredProducts.length > 0 ? featuredProducts : products.slice(0, 4);
-  
+
   // const newArrivals = products.slice(0, 8);
 
-  
-  const dispatch = useAppDispatch();
-  const { items: products, loading } = useAppSelector((state) => state.products);
+  const dispatch = useAppDispatch(); // useAppDispatch hook is used to dispatch actions to the store, 
+  const { items: products, loading } = useAppSelector(
+    (state) => state.products,
+  ); // useAppSelector hook is used to select state from the store
 
-  
- // Fetch only if we don't already have products and not currently loading
+  // Fetch only if we don't already have products and not currently loading
   useEffect(() => {
     if (!products.length && !loading) {
       dispatch(fetchProducts());
     }
   }, [dispatch, products.length, loading]);
-
 
   // Memoize derived lists so they don't recompute each render
   const featuredProducts = useMemo(
@@ -42,16 +39,15 @@ export default function HomePage() {
     [products]
   );
 
-
   const displayProducts = useMemo(() => {
     // While loading, keep showing skeletons from ProductGrid (ProductGrid should act on `loading`)
     if (loading) return products.slice(0, 4);
-    return featuredProducts.length > 0 ? featuredProducts : products.slice(0, 4);
+    return featuredProducts.length > 0
+      ? featuredProducts
+      : products.slice(0, 4);
   }, [loading, featuredProducts, products]);
 
-
   const newArrivals = useMemo(() => products.slice(0, 8), [products]);
-
 
   return (
     <div className="min-h-screen">
@@ -74,7 +70,8 @@ export default function HomePage() {
               <span className="block text-gold-400">Signature Scent</span>
             </h1>
             <p className="text-xl lg:text-2xl mb-8 text-primary-100">
-              Explore our curated collection of premium fragrances from renowned houses and emerging artisans.
+              Explore our curated collection of premium fragrances from renowned
+              houses and emerging artisans.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -84,10 +81,10 @@ export default function HomePage() {
                 Shop All Fragrances
               </Link>
               <Link
-                href="/catalog?category=Niche"
+                href="/catalog?category=Unisex"
                 className="border-2 border-white text-white hover:bg-white hover:text-primary-900 font-semibold py-3 px-8 rounded-lg transition-colors text-center"
               >
-                Explore Niche Collection
+                Explore Unisex Collection
               </Link>
             </div>
           </div>
@@ -105,13 +102,33 @@ export default function HomePage() {
               Find the perfect fragrance for every occasion and personality
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: 'Men', href: '/catalog?category=Men', image: 'https://images.unsplash.com/photo-1708979165880-dd0ff61fa748?q=80&w=1464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-              { name: 'Women', href: '/catalog?category=Women', image: 'https://images.unsplash.com/photo-1746746411904-5b59015667d4?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-              { name: 'Niche', href: '/catalog?category=Niche', image: 'https://images.unsplash.com/photo-1623607314438-ee4df4336c6b?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-              { name: 'Designer', href: '/catalog?category=Designer', image: 'https://images.unsplash.com/photo-1759794108525-94ff060da692?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+              {
+                name: "Men",
+                href: "/catalog?category=Men",
+                image:
+                  "https://images.unsplash.com/photo-1708979165880-dd0ff61fa748?q=80&w=1464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              },
+              {
+                name: "Women",
+                href: "/catalog?category=Women",
+                image:
+                  "https://images.unsplash.com/photo-1746746411904-5b59015667d4?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              },
+              {
+                name: "Niche",
+                href: "/catalog?category=Niche",
+                image:
+                  "https://images.unsplash.com/photo-1623607314438-ee4df4336c6b?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              },
+              {
+                name: "Designer",
+                href: "/catalog?category=Designer",
+                image:
+                  "https://images.unsplash.com/photo-1759794108525-94ff060da692?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              },
             ].map((category) => (
               <Link
                 key={category.name}
@@ -150,15 +167,12 @@ export default function HomePage() {
               Handpicked selections from our perfume experts
             </p>
           </div>
-          
+
           <ProductGrid products={displayProducts} loading={loading} />
-          
+
           {!loading && displayProducts.length > 0 && (
             <div className="text-center mt-12">
-              <Link
-                href="/catalog"
-                className="btn-primary inline-block"
-              >
+              <Link href="/catalog" className="btn-primary inline-block">
                 View All Products
               </Link>
             </div>
@@ -177,15 +191,23 @@ export default function HomePage() {
               Discover scents that match your preferences
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {[
-              { name: 'Floral', href: '/catalog?family=Floral', icon: '🌸' },
-              { name: 'Woody', href: '/catalog?family=Woody', icon: '🌲' },
-              { name: 'Citrus', href: '/catalog?family=Citrus', icon: '🍊' },
-              { name: 'Oriental', href: '/catalog?family=Oriental', icon: '🌟' },
-              { name: 'Fresh', href: '/catalog?family=Fresh', icon: '💧' },
-              { name: 'Gourmand', href: '/catalog?family=Gourmand', icon: '🍯' },
+              { name: "Floral", href: "/catalog?family=Floral", icon: "🌸" },
+              { name: "Woody", href: "/catalog?family=Woody", icon: "🌲" },
+              { name: "Citrus", href: "/catalog?family=Citrus", icon: "🍊" },
+              {
+                name: "Oriental",
+                href: "/catalog?family=Oriental",
+                icon: "🌟",
+              },
+              { name: "Fresh", href: "/catalog?family=Fresh", icon: "💧" },
+              {
+                name: "Gourmand",
+                href: "/catalog?family=Gourmand",
+                icon: "🍯",
+              },
             ].map((family) => (
               <Link
                 key={family.name}
@@ -215,7 +237,7 @@ export default function HomePage() {
               The latest additions to our fragrance collection
             </p>
           </div>
-            
+
           <ProductGrid products={newArrivals} loading={loading} />
         </div>
       </section>
@@ -227,7 +249,8 @@ export default function HomePage() {
             Stay in the Scent
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Be the first to know about new arrivals, exclusive offers, and fragrance tips
+            Be the first to know about new arrivals, exclusive offers, and
+            fragrance tips
           </p>
           <div className="flex flex-col sm:flex-row max-w-md mx-auto gap-4">
             <input

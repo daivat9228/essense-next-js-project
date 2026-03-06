@@ -130,7 +130,7 @@ export default function OrderConfirmationPage() {
                 <p className="font-medium text-gray-900">{order.shippingAddress.name}</p>
                 <p className="text-gray-600">{order.shippingAddress.address}</p>
                 <p className="text-gray-600">
-                  {order.shippingAddress.city}, {order.shippingAddress.state} {order.shippingAddress.pincode}
+                  {order.shippingAddress.city}, {order.shippingAddress.state}{"."} {order.shippingAddress.pincode}
                 </p>
                 <p className="text-gray-600">{order.shippingAddress.phone}</p>
                 <p className="text-gray-600">{order.shippingAddress.email}</p>

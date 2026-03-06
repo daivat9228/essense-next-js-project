@@ -1,5 +1,5 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { User, Order } from '@/types';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { User, Order } from "@/types";
 
 interface UserState {
   user: User | null;
@@ -11,18 +11,19 @@ const initialState: UserState = {
   orders: [],
 };
 
+
 // Load user from localStorage
 const loadUserFromStorage = (): UserState => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     try {
-      const savedUser = localStorage.getItem('user');
-      const savedOrders = localStorage.getItem('orders');
+      const savedUser = localStorage.getItem("user");
+      const savedOrders = localStorage.getItem("orders");
       return {
         user: savedUser ? JSON.parse(savedUser) : null,
         orders: savedOrders ? JSON.parse(savedOrders) : [],
       };
     } catch (error) {
-      console.error('Error loading user from localStorage:', error);
+      console.error("Error loading user from localStorage:", error);
     }
   }
   return initialState;
@@ -30,22 +31,22 @@ const loadUserFromStorage = (): UserState => {
 
 // Save user to localStorage
 const saveUserToStorage = (state: UserState) => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     try {
       if (state.user) {
-        localStorage.setItem('user', JSON.stringify(state.user));
+        localStorage.setItem("user", JSON.stringify(state.user));
       } else {
-        localStorage.removeItem('user');
+        localStorage.removeItem("user");
       }
-      localStorage.setItem('orders', JSON.stringify(state.orders));
+      localStorage.setItem("orders", JSON.stringify(state.orders));
     } catch (error) {
-      console.error('Error saving user to localStorage:', error);
+      console.error("Error saving user to localStorage:", error);
     }
   }
 };
 
 const userSlice = createSlice({
-  name: 'user',
+  name: "user",
   initialState: loadUserFromStorage(),
   reducers: {
     login: (state, action: PayloadAction<{ email: string; name: string }>) => {
@@ -70,3 +71,32 @@ const userSlice = createSlice({
 
 export const { login, logout, addOrder } = userSlice.actions;
 export default userSlice.reducer;
+
+
+// export interface User {
+//   id: string;
+//   email: string;
+//   name: string;
+//   isAuthenticated: boolean;
+// }
+
+// export interface Order {
+//   id: string;
+//   items: CartItem[];
+//   total: number;
+//   shippingAddress: ShippingAddress;
+//   createdAt: string;
+//   status: 'pending' | 'confirmed' | 'shipped' | 'delivered';
+// }
+
+// export interface CartItem {
+//   id: string;
+//   productId: string;
+//   title: string;
+//   brand: string;
+//   image: string;
+//   size: number;
+//   concentration: string;
+//   price: number;
+//   quantity: number;
+// }
