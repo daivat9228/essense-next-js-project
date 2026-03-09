@@ -9,7 +9,7 @@ import Link from 'next/link';
 export default function WishlistPage() {
   const dispatch = useAppDispatch();
   const wishlistItems = useAppSelector((state) => state.wishlist.items);
-  const { items: products, loading } = useAppSelector((state) => state.products);
+  const { items: products, loading, error } = useAppSelector((state) => state.products);
   
   useEffect(() => {
     if (products.length === 0) {
@@ -26,6 +26,14 @@ export default function WishlistPage() {
         <ProductGrid products={[]} loading={true} />
       </div>
     );
+  }
+
+  if (error) {
+    return(
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-red-500'>
+        <p>Failed to load products. Please try again later.</p>
+      </div>
+    )
   }
 
   if (wishlistProducts.length === 0) {
