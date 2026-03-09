@@ -76,7 +76,7 @@ export default function ShippingInfoPage() {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 relative z-20">
         <div className="space-y-10">
           {/* Shipping Options */}
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-8">
