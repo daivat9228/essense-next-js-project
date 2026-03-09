@@ -1,12 +1,21 @@
 'use client';
 
-import { useAppSelector } from '@/store';
+import { useEffect } from 'react';
+import { useAppSelector, useAppDispatch } from '@/store';
+import { fetchProducts } from '@/store/slices/productsSlice';
 import ProductGrid from '@/components/ProductGrid';
 import Link from 'next/link';
 
 export default function WishlistPage() {
+  const dispatch = useAppDispatch();
   const wishlistItems = useAppSelector((state) => state.wishlist.items);
   const { items: products, loading } = useAppSelector((state) => state.products);
+  
+  useEffect(() => {
+    if (products.length === 0) {
+      dispatch(fetchProducts());
+    }
+  }, [dispatch, products.length]);
   
   const wishlistProducts = products.filter(product => wishlistItems.includes(product.id));
 
