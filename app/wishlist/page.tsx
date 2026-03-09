@@ -1,14 +1,23 @@
 'use client';
 
 import { useAppSelector } from '@/store';
-import ProductCard from '@/components/ProductCard';
+import ProductGrid from '@/components/ProductGrid';
 import Link from 'next/link';
 
 export default function WishlistPage() {
   const wishlistItems = useAppSelector((state) => state.wishlist.items);
-  const products = useAppSelector((state) => state.products.items);
+  const { items: products, loading } = useAppSelector((state) => state.products);
   
   const wishlistProducts = products.filter(product => wishlistItems.includes(product.id));
+
+  if (loading) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h1 className="text-3xl font-serif font-bold text-gray-900 mb-8">My Wishlist</h1>
+        <ProductGrid products={[]} loading={true} />
+      </div>
+    );
+  }
 
   if (wishlistProducts.length === 0) {
     return (
@@ -42,11 +51,7 @@ export default function WishlistPage() {
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {wishlistProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      <ProductGrid products={wishlistProducts} loading={false} />
     </div>
   );
 }
